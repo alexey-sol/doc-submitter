@@ -1,0 +1,11 @@
+FROM node:16.4-alpine
+
+ARG NODE_ENV=${NODE_ENV}
+ARG APP_NAME=${APP_NAME}
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --quiet
+
+COPY . .

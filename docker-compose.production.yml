@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: ./builder/Dockerfile.production
+            args:
+                NODE_ENV: ${NODE_ENV}
+                APP_NAME: ${APP_NAME}
+        command: sh -c "npm run build && npm start"

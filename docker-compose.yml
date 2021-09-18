@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+    web:
+        container_name: doc_submitter_web
+        restart: always
+        tty: true
+        ports:
+            - ${WEB_PORT_EXTERNAL}:${WEB_PORT}
+        networks:
+            - doc_submitter_web
+
+networks:
+    doc_submitter_web:
+        driver: bridge
