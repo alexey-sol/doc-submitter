@@ -1,5 +1,6 @@
 FROM node:16.4-alpine
 
+ARG GENERATE_SOURCEMAP=false
 ARG NODE_ENV=${NODE_ENV}
 ARG APP_NAME=${APP_NAME}
 
@@ -9,3 +10,5 @@ COPY package*.json ./
 RUN npm ci --quiet
 
 COPY . .
+
+RUN npm run build

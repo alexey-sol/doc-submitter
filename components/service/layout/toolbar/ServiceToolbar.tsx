@@ -11,7 +11,6 @@ const ServiceToolbar = () => {
     const context = useContext(ServiceContext);
 
     const handleClickOnTitle = () => {
-        context.setDrawerIsOpen(false);
         context.redirectToServiceRoot();
     };
 

@@ -6,7 +6,7 @@ it("should render ServiceTitle successfully", () => {
     render(<ServiceTitle />);
 });
 
-it("should be clickable if handleClick prop is provided", () => {
+it("should be clickable if handleClick is provided", () => {
     const handleClickMock = jest.fn();
 
     const result = render(<ServiceTitle handleClick={handleClickMock} />);
@@ -15,14 +15,14 @@ it("should be clickable if handleClick prop is provided", () => {
     fireEvent.click(elem);
 
     expect(handleClickMock).toBeCalledTimes(1);
-    expect(elem).not.toHaveAttribute("disabled");
+    expect(elem).not.toBeDisabled();
 });
 
-it("should be not clickable if handleClick prop is not provided", () => {
+it("should not be clickable if handleClick is not provided", () => {
     const result = render(<ServiceTitle handleClick={undefined} />);
     const elem = result.getByRole("button");
 
     fireEvent.click(elem);
 
-    expect(elem).toHaveAttribute("disabled");
+    expect(elem).toBeDisabled();
 });

@@ -8,4 +8,8 @@ services:
             args:
                 NODE_ENV: ${NODE_ENV}
                 APP_NAME: ${APP_NAME}
-        command: sh -c "npm run build && npm start"
+        command: sh -c "npm start"
+        deploy:
+            resources:
+                limits:
+                    memory: 512m

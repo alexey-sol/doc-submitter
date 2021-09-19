@@ -33,6 +33,7 @@ const Drawer = () => {
             elevation={6}
             onClose={() => context.setDrawerIsOpen(false)}
             open={context.drawerIsOpen}
+            role="menu"
             variant="temporary"
             BackdropProps={{
                 sx: { background: "transparent" },
