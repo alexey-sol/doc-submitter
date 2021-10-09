@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Layout from "@/components/landing/layout";
 
-const About: NextPage = () => (
+const AboutPage: NextPage = () => (
     <Layout>
         <Typography>
             О компании
@@ -10,4 +10,4 @@ const About: NextPage = () => (
     </Layout>
 );
 
-export default About;
+export default AboutPage;

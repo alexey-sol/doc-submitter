@@ -72,6 +72,7 @@ module.exports = {
         "no-shadow": "off",
         "no-use-before-define": "off",
         "no-useless-constructor": "off",
+        "react/destructuring-assignment": "off",
         "react/jsx-filename-extension": ["warn", { extensions: [".tsx", ".ts"] }],
         "react/jsx-fragments": ["error", "element"],
         "react/jsx-indent": ["error", 4],

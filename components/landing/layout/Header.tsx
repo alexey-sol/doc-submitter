@@ -7,7 +7,7 @@ const Header = () => (
         <Tabs aria-label="tabs">
             <Link href="/pricing"><Tab label="Услуги и стоимость" /></Link>
             <Link href="/about"><Tab label="О компании" /></Link>
-            <Link href="/service"><Tab label="Service" /></Link>
+            <Link href="/service/docs"><Tab label="Service" /></Link>
         </Tabs>
     </AppBar>
 );

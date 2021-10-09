@@ -27,7 +27,7 @@ export const ServiceProvider = ({ children }: Props) => {
     const [drawerIsOpen, setDrawerIsOpen] = useState<boolean>(false);
 
     const router = useRouter();
-    const redirectToServiceRoot = () => router.push("/service");
+    const redirectToServiceRoot = () => router.push("/service/docs");
 
     const value = {
         accountMenuAnchor,

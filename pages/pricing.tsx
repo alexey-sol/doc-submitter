@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Layout from "@/components/landing/layout";
 
-const Pricing: NextPage = () => (
+const PricingPage: NextPage = () => (
     <Layout>
         <Typography>
             Услуги и стоимость
@@ -10,4 +10,4 @@ const Pricing: NextPage = () => (
     </Layout>
 );
 
-export default Pricing;
+export default PricingPage;

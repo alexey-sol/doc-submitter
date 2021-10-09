@@ -35,22 +35,22 @@ export const menuItems: MenuItem[] = [
     },
     {
         text: "Подписки",
-        icon: <Email color="secondary" />,
+        icon: <Email />,
         onClick: () => console.log("Clicked on Подписки"),
     },
     {
         text: "Справка",
-        icon: <HelpCenter color="secondary" />,
+        icon: <HelpCenter />,
         onClick: () => console.log("Clicked on Справка"),
     },
     {
         text: "Политика конфиденциальности",
-        icon: <Assignment color="secondary" />,
+        icon: <Assignment />,
         onClick: () => console.log("Clicked on Политика конфиденциальности"),
     },
     {
         text: "Условия использования",
-        icon: <Grading color="secondary" />,
+        icon: <Grading />,
         onClick: () => console.log("Clicked on Условия использования"),
     },
 ];

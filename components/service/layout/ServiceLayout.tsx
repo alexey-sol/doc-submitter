@@ -1,46 +1,32 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
 import AppBar from "@mui/material/AppBar";
+import { Container } from "@mui/material";
 import AccountMenu from "./account-menu";
 import ServiceDrawer from "./drawer";
 import ServiceToolbar from "./toolbar";
-
-const useStyles = makeStyles(() => ({
-    page: {
-        width: "100%", // TODO
-    },
-    root: {
-        display: "flex",
-        flexDirection: "column",
-    },
-}));
 
 export interface Props {
     children?: React.ReactNode;
 }
 
-const ServiceLayout = ({ children }: Props) => {
-    const classes = useStyles();
+const ServiceLayout = ({ children }: Props) => (
+    <Container disableGutters maxWidth={false} sx={{ mx: "auto" }}>
+        <AppBar
+            color="primary"
+            elevation={0}
+            position="sticky"
+        >
+            <ServiceToolbar />
+        </AppBar>
 
-    return (
-        <section className={classes.root}>
-            <AppBar
-                color="primary"
-                elevation={0}
-                position="sticky"
-            >
-                <ServiceToolbar />
-            </AppBar>
+        <Container disableGutters>
+            {children}
+        </Container>
 
-            <main className={classes.page}>
-                {children}
-            </main>
-
-            <ServiceDrawer />
-            <AccountMenu />
-        </section>
-    );
-};
+        <ServiceDrawer />
+        <AccountMenu />
+    </Container>
+);
 
 ServiceLayout.defaultProps = {
     children: null,
