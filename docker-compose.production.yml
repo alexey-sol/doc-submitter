@@ -7,7 +7,8 @@ services:
             dockerfile: ./builder/Dockerfile.production
             args:
                 NODE_ENV: ${NODE_ENV}
-                APP_NAME: ${APP_NAME}
+                NEXT_PUBLIC_APP_NAME: ${NEXT_PUBLIC_APP_NAME}
+                NEXT_PUBLIC_WEB_URL: ${NEXT_PUBLIC_WEB_URL}
         command: sh -c "npm start"
         deploy:
             resources:

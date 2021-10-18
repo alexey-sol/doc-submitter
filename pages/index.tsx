@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Layout from "@/components/landing/layout";
+import Layout from "@/features/landing/layout";
 import config from "@/utils/config";
 
 const Index: NextPage = () => (

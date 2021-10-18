@@ -15,8 +15,12 @@
         "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-            "@/components/*": ["components/*"],
+            "@/Api": ["utils/wrappers/Api"],
+            "@/app/*": ["features/app/*"],
+            "@/features/*": ["features/*"],
+            "@/files/*": ["features/files/*"],
             "@/pages/*": ["pages/*"],
+            "@/users/*": ["features/users/*"],
             "@/utils/*": ["utils/*"]
         }
     },

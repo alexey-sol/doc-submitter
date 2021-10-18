@@ -9,4 +9,5 @@ services:
         volumes:
             - ./:/app
         environment:
-            - APP_NAME
+            - NEXT_PUBLIC_APP_NAME
+            - NEXT_PUBLIC_WEB_URL

@@ -11,7 +11,7 @@ module.exports = {
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
     modulePaths: ["../"],
     preset: "ts-jest",
-    roots: ["../components", "../utils"],
+    roots: ["../features", "../utils"],
     setupFilesAfterEnv: ["./jest.setup.ts"],
     testEnvironment: "jsdom",
     testPathIgnorePatterns: ["../.next/", "../node_modules/"],

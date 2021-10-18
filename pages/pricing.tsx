@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import type { NextPage } from "next";
-import Layout from "@/components/landing/layout";
+import Layout from "@/features/landing/layout";
 
 const PricingPage: NextPage = () => (
     <Layout>

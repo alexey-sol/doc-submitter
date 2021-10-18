@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-import Layout from "@/components/service/layout";
-import { ServiceProvider } from "@/components/service/context";
+import Layout from "@/features/service/layout";
+import { ServiceProvider } from "@/features/service/context";
 
 const DiskPage: NextPage = () => (
     <ServiceProvider>

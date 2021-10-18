@@ -4,4 +4,12 @@ module.exports = {
         ignoreDuringBuilds: true,
     },
     reactStrictMode: true,
+    async rewrites() {
+        return [
+            { // proxying to API
+                source: "/:path*",
+                destination: `${process.env.API_URL}/:path*`,
+            },
+        ];
+    },
 };

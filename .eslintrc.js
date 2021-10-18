@@ -33,8 +33,12 @@ module.exports = {
             alias: {
                 extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
                 map: [
-                    ["@/components", "./components"],
+                    ["@/Api", "./utils/wrappers/Api"],
+                    ["@/app", "./features/app"],
+                    ["@/features", "./features"],
+                    ["@/files", "./features/files"],
                     ["@/pages", "./pages"],
+                    ["@/users", "./features/users"],
                     ["@/utils", "./utils"],
                 ],
             },
@@ -49,6 +53,7 @@ module.exports = {
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-shadow": "error",
         "@typescript-eslint/no-unused-vars": ["error", { args: "none" }],
+        camelcase: "off",
         "class-methods-use-this": "off",
         "consistent-return": "off",
         "import/extensions": "off",
