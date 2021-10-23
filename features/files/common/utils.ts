@@ -1,5 +1,5 @@
 import {
-    File, FileType, MaterialSvgIcon, RawFile, Status,
+    File, FileType, RawFile, Status,
 } from "@/files/common/types";
 
 export const FileTypeIcons = {
@@ -17,10 +17,6 @@ export const StatusTranslation = {
 export class FileNormalizer {
     constructor(private rawFile: RawFile) {
         this.rawFile = rawFile;
-    }
-
-    static async getFileTypeIcon(type: FileType): Promise<MaterialSvgIcon> {
-        return (await FileTypeIcons[type]).default;
     }
 
     private getStatusWithSigningDate(): string | undefined {
@@ -42,6 +38,7 @@ export class FileNormalizer {
             type: this.rawFile.file_type,
             path: this.rawFile.file_path,
             date: this.rawFile.date,
+            status: "Status?",
             statusWithSigningDate: this.getStatusWithSigningDate(),
         };
     }

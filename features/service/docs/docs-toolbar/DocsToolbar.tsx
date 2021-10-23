@@ -17,7 +17,7 @@ const DocsToolbar = ({ setView, view }: Props) => (
             columnGap: 1,
             justifyContent: "flex-end",
             width: "fit-content",
-            my: 2,
+            marginBottom: 4,
         }}
     >
         <DocsToolbarSelect />

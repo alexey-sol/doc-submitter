@@ -24,6 +24,9 @@
             "@/utils/*": ["utils/*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules"]
+    "include": [
+        "next-env.d.ts", "features/**/*.ts", "features/**/*.tsx", "pages/**/*.ts",
+        "pages/**/*.tsx", "utils/**/*.ts", "utils/**/*.tsx"
+    ],
+    "exclude": [".next", "coverage", "node_modules", "out"]
 }

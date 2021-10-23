@@ -2,6 +2,8 @@ import React from "react";
 import { GridView, SortByAlpha, ViewListOutlined } from "@mui/icons-material";
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { View } from "../common/types";
+import { useAppDispatch } from "@/app/hooks";
+import { sortFiles } from "@/files/redux/slice";
 
 interface Props {
     setView: (view: View) => void;
@@ -9,6 +11,7 @@ interface Props {
 }
 
 const DocsToolbarButtons = ({ setView, view }: Props) => {
+    const dispatch = useAppDispatch();
     const isListView = view === View.LIST;
 
     const toggleView = () => (isListView)
@@ -16,6 +19,7 @@ const DocsToolbarButtons = ({ setView, view }: Props) => {
         : setView(View.LIST);
 
     const toggleViewTitle = `В виде ${(isListView) ? "сетки" : "списка"}`;
+    const sortDocs = () => dispatch(sortFiles());
 
     return (
         <Box>
@@ -27,8 +31,8 @@ const DocsToolbarButtons = ({ setView, view }: Props) => {
                 </IconButton>
             </Tooltip>
 
-            <Tooltip arrow disableInteractive title="Сортировать">
-                <IconButton disableRipple>
+            <Tooltip arrow disableInteractive title="Сортировать по названию">
+                <IconButton disableRipple onClick={sortDocs}>
                     <SortByAlpha />
                 </IconButton>
             </Tooltip>

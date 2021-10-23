@@ -2,12 +2,12 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
-// TODO: deal with font size
-const SearchBar = ({ handleClick }) => {
-    // const handleClick = (params) => {
-    //     console.log("params", params);
-    // };
+interface Props {
+    handleClick: () => void;
+}
 
+// TODO: deal with font size
+const SearchBar = ({ handleClick }: Props) => {
     return (
         <Box
             onClick={handleClick}

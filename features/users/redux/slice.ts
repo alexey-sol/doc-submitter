@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { User } from "../types";
+import { User } from "@/users/common/types";
 import * as actions from "./actions";
 
 export interface UsersState {
-    currentUser: User, // TODO move it to auth
+    currentUser?: User, // TODO move it to auth
     error?: Error,
     users: User[]
 }

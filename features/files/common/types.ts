@@ -1,8 +1,3 @@
-import { SvgIconTypeMap } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
-
-export type MaterialSvgIcon = OverridableComponent<SvgIconTypeMap<Record<string, unknown>, "svg">>;
-
 export enum Status {
     PENDING,
     DONE
@@ -31,5 +26,6 @@ export interface File {
     type: FileType;
     path: string;
     date?: string;
+    status: string;
     statusWithSigningDate?: string;
 }

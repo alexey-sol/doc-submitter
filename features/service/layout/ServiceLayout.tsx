@@ -10,7 +10,7 @@ export interface Props {
 }
 
 const ServiceLayout = ({ children }: Props) => (
-    <Container disableGutters maxWidth={false} sx={{ mx: "auto" }}>
+    <Container disableGutters maxWidth={false} sx={{ mx: "auto", minWidth: 260 }}>
         <AppBar
             color="primary"
             elevation={0}

@@ -10,7 +10,7 @@ module.exports = {
         "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended",
     ],
-    ignorePatterns: ["node_modules/"],
+    ignorePatterns: [".next/", "coverage/", "node_modules/", "out/"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaFeatures: {

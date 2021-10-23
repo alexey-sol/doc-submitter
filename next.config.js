@@ -12,4 +12,11 @@ module.exports = {
             },
         ];
     },
+    webpack(config, { dev }) {
+        if (dev) {
+            config.devtool = "cheap-module-source-map"; // eslint-disable-line
+        }
+
+        return config;
+    },
 };

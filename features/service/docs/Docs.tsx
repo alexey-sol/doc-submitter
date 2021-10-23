@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "@mui/material";
 import DocsToolbar from "./docs-toolbar";
-import DocsCategories from "./docs-categories";
+import DocsContainer from "./docs-container";
 import { View } from "./common/types";
 import DocsContextMenu from "@/features/service/docs/common/DocsContextMenu";
 
@@ -16,11 +16,11 @@ const Docs = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-end",
-                width: 860,
+                p: 2,
             }}
         >
             <DocsToolbar setView={setView} view={view} />
-            <DocsCategories view={view} />
+            <DocsContainer view={view} />
             <DocsContextMenu />
         </Container>
     );

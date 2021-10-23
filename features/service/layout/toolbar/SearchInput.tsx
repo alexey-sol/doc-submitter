@@ -1,11 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { KeyboardEvent, useEffect, useRef } from "react";
 import { Autocomplete, Stack, TextField } from "@mui/material";
 
-const SearchInput = ({ handleBlur }) => {
+interface Props {
+    handleBlur: () => void;
+}
+
+const SearchInput = ({ handleBlur }: Props) => {
     const containerRef = useRef<HTMLElement>();
 
     useEffect(() => {
-        const handleKeydown = (event) => {
+        const handleKeydown = (event: KeyboardEvent) => {
             const pressedEscape = event.key === "Escape";
             if (pressedEscape) handleBlur();
         };
@@ -13,11 +17,11 @@ const SearchInput = ({ handleBlur }) => {
         const container = containerRef.current;
 
         container?.addEventListener("blur", handleBlur, true);
-        window.addEventListener("keydown", handleKeydown);
+        // window.addEventListener("keydown", handleKeydown);
 
         return () => {
             container?.removeEventListener("blur", handleBlur, true);
-            window.removeEventListener("keydown", handleKeydown);
+            // window.removeEventListener("keydown", handleKeydown);
         };
     }, [handleBlur]);
 
